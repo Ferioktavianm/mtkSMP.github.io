@@ -1,0 +1,98 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(to top, #f3f3f3, whitesmoke);
+	height: 100vh;
+}
+
+.t-atas {
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.isi-soal {
+	background: white;
+	width:90%;
+	border-radius: 20px;
+	box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+	grid-template-columns: repeat(1, 1fr) !important;
+	display: grid !important;
+}
+
+#jawaban {
+	text-shadow: 0 0 3px rgba(0, 0, 0, 1.0);
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(2, 1fr);
+	border-radius: 20px;
+}
+
+.jawab {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+#timer {
+	width: 100%;
+	position: absolute;
+	display: none;
+	justify-content: flex-end;
+	align-items: center;
+	left: 10%;
+	top: 0;
+}
+
+#soal {
+	display: none;
+}
+
+.con-soals {
+	display: none;
+}
+
+.btn-play {
+	width: 200px;
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.alert-salah {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	animation: showHide .7s ease-in-out forwards;
+	cubic-bezier : 0.68, -0.55, 0.27, 1.55;
+	display: none;
+}
+
+.alert-benar {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	animation: showHide .3s ease-in-out forwards;
+	cubic-bezier : 0.68, -0.55, 0.27, 1.55;
+	display: none;
+}
+
+#done {
+	display: none;
+}
+
+@keyframes showHide {
+	from {
+		transform: translateY(-200px);
+	} to {
+		transform: translateY(0);
+	}
+}
